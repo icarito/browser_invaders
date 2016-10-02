@@ -26,10 +26,10 @@ KEYBOARD_LISTENER = None
 
 def init():
     global SCREEN, CTX
-    document.body.append(html.H1("Browser Invaders - a Python adventure"))
+    document.body.appendChild(html.H1("Browser Invaders - a Python adventure"))
     SCREEN = html.CANVAS(width=WIDTH, height=HEIGHT)
     SCREEN.style = {"background": "black"}
-    document.body.append(SCREEN)
+    document.body.appendChild(SCREEN)
     CTX = SCREEN.getContext("2d")
     for image_name in "ship", "enemy_01", "enemy_02":
         images[image_name] = html.IMG(src="images/{}.png".format(image_name))
